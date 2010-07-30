@@ -27,6 +27,9 @@ module FotoVerite
     def parse_tracking(xml)
       event_list = []
       parse = Hpricot.parse(xml)/:trackdetail
+       if parse == []
+          parse = Hpricot.parse(xml)/:tracksummary
+        end
       if parse == []
         RAILS_DEFAULT_LOGGER.info "#{xml}"
         return (Hpricot.parse(xml)/:description).inner_html
