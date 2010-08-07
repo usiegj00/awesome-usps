@@ -66,7 +66,7 @@ Because most of the API's require an additional level of permission to use with 
 API methods are as follow
 
 * track
-* veryify_address
+* verify_address
 * zip_lookup
 * city\_state\_lookup
 * delivery\_confirmation\_label
@@ -174,7 +174,7 @@ Object Methods are as follow
 	#All methods here will take a location array of up to five address
 	
 	#To verify an address and fill in missing information. If mulitple addresses were found for an address :verified => false
-    usps.veryify_address("locations array")
+    usps.verify_address("locations array")
 	
 	#Will fill in missing zip5 and zip4 for an address
 	usps.zipcode_lookup("location array")
